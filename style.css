@@ -1,0 +1,224 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@font-face {
+    font-family: 'Barlow-Med';
+    font-style: normal;
+    font-weight: 500;
+    src: url(assets/fonts/BarlowSemiCondensed-Medium.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: 'Barlow-SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    src: url(assets/fonts/BarlowSemiCondensed-SemiBold.ttf) format(truetype);
+}
+
+:root {
+    /* Color */
+    --clr-white : hsl(0, 0%, 100%);
+    --clr-gray-light-very : hsl(214, 17%, 92%);
+    --clr-gray-light : hsl(0, 0%, 81%);
+    --clr-gray : hsl(224, 10%, 45%);
+    --clr-grey-dark: hsl(217, 19%, 35%);
+    --clr-blue-dark: hsl(219, 29%, 14%);
+    --clr-black : hsl(0, 0%, 7%);
+    --clr-purple-light : hsl(260, 100%, 95%);
+    --clr-purple : hsl(264, 82%, 80%);
+    --clr-purple-dark: hsl(263, 55%, 52%);
+
+    /* Typography */
+    --ff-barlow-med : 'Barlow-Med';
+    --ff-barlow-semi : 'Barlow-SemiBold';
+    --fs-h1: 1.25rem;
+    --fs-h2: 0.8125rem;
+    --fs-p: 0.6875rem;
+
+    /* spacing */
+    --sp-4xl: 4rem;
+    --sp-3xl: 3rem;
+    --sp-xl: 2rem;
+    --sp-lg: 1.5rem;
+    --sp-med: 1.25rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* 16px default browser */
+  -webkit-text-size-adjust: 100%; /* cegah font auto resize di iOS */
+}
+
+body {
+    padding: var(--sp-4xl) var(--sp-lg);
+    background-color: var(--clr-gray-light-very);
+}
+
+.main {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+}
+
+.card {
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: var(--sp-lg) var(--sp-xl) var(--sp-xl) var(--sp-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-med);
+    box-shadow: 2.5rem 3rem 2.5rem -2.5rem hsla(217, 19%, 35%, 0.25);
+}
+
+.cre-img {
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+}
+
+
+.creator {
+    display: flex;
+    align-items: center;
+    gap: 1.0625rem;
+}
+
+.cre{
+    font-family: var(--ff-barlow-med);
+}
+
+.name {
+    font-size: var(--fs-h2);
+}
+
+.status {
+    font-size: var(--fs-p);
+}
+
+.quotes {
+    display: flex;
+    flex-direction: column;
+    /* gap: var(--sp-3xl); */
+    gap: var(--sp-med);
+}
+
+.title {
+    font-family: var(--ff-barlow-semi);
+    font-size: var(--fs-h1);
+}
+
+.body {
+    font-family: var(--ff-barlow-med);
+    font-size: var(--fs-h2);
+    line-height: 1.1375rem;
+    margin-right: 1.03125rem;
+}
+
+.opac-50{
+    opacity: 0.5;
+}
+
+.opac-70{
+    opacity: 0.7;
+}
+
+
+/* ============================ONE============================*/
+
+.one {
+    background-color: var(--clr-purple-dark);
+    background-image: url('./assets/images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top 0 right 10%;
+    background-size: 6.5rem;
+    grid-area: one;
+}
+
+.clr-one {
+    color: var(--clr-white);
+}
+
+.bc-primary{
+    border: 0.125rem solid var(--clr-purple);
+}
+
+/* ============================TWO============================*/
+
+.two {
+    background-color: var(--clr-grey-dark);
+    grid-area: two;
+}
+
+/* ============================THREE============================*/
+
+.three {
+    background-color: var(--clr-white);
+    grid-area: three;
+}
+
+.clr-three {
+    color: var(--clr-grey-dark);
+}
+
+/* ============================FOUR============================*/
+
+.four {
+    background-color: var(--clr-blue-dark);
+    grid-area: four;
+}
+
+.bc-four{
+    border: 0.125rem solid var(--clr-purple-dark);
+}
+
+.clr-four {
+    color: var(--clr-white);
+}
+
+/* ============================FIVE============================*/
+
+.five {
+    background-color: var(--clr-white);
+    grid-area: five;
+}
+
+/* TABLETVIEW */
+
+@media (min-width: 48rem) {
+    body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .main {
+        width: 100%;
+        max-width: 68.75rem;
+        margin: var(--sp-xl) auto;
+        /* padding: var(--sp-4xl)  0; */
+        display: grid;
+        gap: var(--sp-xl);
+        grid-template-columns: repeat(4,1fr);
+        /* grid-template-rows: repeat(2, 1fr); */
+        grid-template-areas: 
+        'one one two five'
+        'three four four five';
+    }
+
+    .quotes {
+        display: flex;
+        flex-direction: column;
+        /* gap: var(--sp-3xl); */
+        gap: var(--sp-lg);
+    }
+}
+
