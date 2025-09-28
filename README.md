@@ -36,9 +36,9 @@ Users should be able to:
 
 ![Testimonials grid section on Mobile View](./design/screenshot/mobile_view.png)
 
-![Testimonials grid section on Desktop View](./design/screenshoot/desktop_view.png)
+![Testimonials grid section on Desktop View](./design/screenshot/desktop_view.png)
 
-![Testimonials grid section on Tablet View](./design/screenshoot/tablet_view.png)
+![Testimonials grid section on Tablet View](./design/screenshot/tablet_view.png)
 
 
 ### Links
