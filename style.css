@@ -199,11 +199,11 @@ body {
         padding-left: 0;
         padding-right: 0;
     }
-    
+
     .main {
         width: 100%;
         max-width: 68.75rem;
-        margin: var(--sp-xl) auto;
+        margin: var(--sp-lg) auto;
         /* padding: var(--sp-4xl)  0; */
         display: grid;
         gap: var(--sp-xl);
